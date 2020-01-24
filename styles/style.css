@@ -1,0 +1,121 @@
+body {
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue light sans-serif';
+    font-weight: 300;
+    line-height: 1.6em;
+    font-size: 1.3em;
+}
+
+a {
+    color: #097659;
+}
+
+input {
+    font-size: 1.5em;
+}
+
+.container {
+    widows: 960px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.delete-team-link {
+    color: red;
+}
+
+#editable {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#notes-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+
+
+
+
+
+
+
+/* this for a potential bracket */
+.round {
+    float: left;
+    font-size: 1.5em;
+  }
+  .round.r-of-4 {
+    
+  }
+  .round.r-of-2 {
+    margin-top: 47px;
+  }
+  .bracket-game {
+    max-width: 500px;
+    margin: 10px 0;
+  }
+  .player {
+    min-width: 100px;
+    border: 1px solid #AAA;
+    padding-left: 10px;
+  }
+  .player.top {
+    border-radius: 3px 3px 0 0;
+    font-size: 1.5em;
+  }
+  .player.bot {
+    border-radius: 0 0 3px 3px;
+    font-size: 1.5em;
+  }
+  .player .score {
+    display: inline;
+    float: right;
+    border-left: 1px solid #AAA;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #EEE;
+  }
+  .player.win {
+    background-color: #B8F2B8;
+  }
+  .player.loss {
+    background-color: #F2B8B8;
+  }
+  .connectors {
+    float: left;
+    min-width: 35px;
+  }
+  .connectors.r-of-2 .top-line {
+    position: relative;
+    top: 53px;
+    width: 17px;
+    border: 1px solid #AAA;
+  }
+  .connectors.r-of-2 .bottom-line {
+    position: relative;
+    top: 148px;
+    width: 17px;
+    border: 1px solid #AAA;
+  }
+  .connectors.r-of-2 .vert-line {
+    position: relative;
+    top: 48px;
+    left: -16px;
+    height: 100px;
+    border-right: 2px solid #AAA;
+  }
+  .connectors.r-of-2 .next-line {
+    position: relative;
+    top: -4px;
+    left: 17px;
+    width: 17px;
+    border: 1px solid #AAA;
+  }
+  .clear {
+    clear: both;
+  }
