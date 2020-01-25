@@ -7,8 +7,10 @@ class Teams {
     }
 
     fetchAndLoadTeams() {
-        this.adapter.getTeams().then(teams => {
-            return console.log(teams)
+        this.adapter
+        .getTeams()
+        .then(teams => {
+            teams.forEach(team => this.teams.push(team)) //iterating through teams and pushed them into this.teams, now i have access to the teams in all the dif methods
         })
         .then(() => {
             this.render()
