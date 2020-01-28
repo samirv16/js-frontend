@@ -8,13 +8,18 @@ class Posts {
 
     initbindEventListeners() {
         this.postsContainer = document.getElementById("posts-container")
+        this.newPostItem1 = document.getElementById('new-post-item1')
+        this.newPostItem2 = document.getElementById('new-post-item2')
         this.postForm = document.getElementById('new-post-form')
-        this.postForm.addEventListener('submit', this.createPost)
+        this.postForm.addEventListener('submit', this.createPost.bind(this))
     }
 
     createPost(e) {
         e.preventDefault()
-        console.log('post is being created')
+        const value = this.newPostItem1.value
+        const value = this.newPostItem2.value
+
+        this.adapter.createPost(value)
     }
 
     fetchAndLoadPosts() {
