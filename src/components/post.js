@@ -4,4 +4,8 @@ class Post {
         this.item1 = postJSON.item1
         this.item2 = postJSON.item2
     }
+
+    renderLi() {
+        return ``
+    }
 }

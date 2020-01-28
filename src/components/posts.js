@@ -2,8 +2,12 @@ class Posts {
     constructor() {
         this.posts = []
         this.adapter = new PostsAdapter()
-        // this.bindEventListeners()
+        this.initbindEventListeners()
         this.fetchAndLoadPosts()
+    }
+
+    initbindEventListeners() {
+        this.postsContainer = document.getElementById("posts-container")
     }
 
     fetchAndLoadPosts() {
@@ -18,7 +22,6 @@ class Posts {
     }
 
     render() {
-        const postsContainer = document.getElementById("posts-container")
-        postsContainer.innerHTML = `<li>Post 1</li><li>Post 2</li>`
+        this.postsContainer.innerHTML = this.posts.map(post => `<li><h4>What I Want:</h4> ${post.item1} <h4>What I'm Offering:</h4> ${post.item2}</li>`).join('')
     }
 }
