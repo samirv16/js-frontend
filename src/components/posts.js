@@ -19,6 +19,6 @@ class Posts {
 
     render() {
         const postsContainer = document.getElementById("posts-container")
-        postsContainer.innerHTML = 'my posts here'
+        postsContainer.innerHTML = `<li>Post 1</li><li>Post 2</li>`
     }
 }
