@@ -10,7 +10,7 @@ class Posts {
         this.adapter
         .getPosts()
         .then(posts => {
-            posts.forEach(post => this.posts.push(post)) //iterating through teams and pushed them into this.teams, now i have access to the teams in all the dif methods
+            posts.forEach(post => this.posts.push(new Post(post))) //iterating through teams and pushed them into this.teams, now i have access to the teams in all the dif methods
         })
         .then(() => {
             this.render()
