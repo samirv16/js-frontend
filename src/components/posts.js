@@ -17,9 +17,9 @@ class Posts {
     createPost(e) {
         e.preventDefault()
         const value = this.newPostItem1.value
-        const value = this.newPostItem2.value
+        const value1 = this.newPostItem2.value
 
-        this.adapter.createPost(value)
+        this.adapter.createPost(value, value1)
     }
 
     fetchAndLoadPosts() {
