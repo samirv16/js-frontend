@@ -6,6 +6,6 @@ class Post {
     }
 
     renderLi() {
-        return ``
+        return `<li><h4>What I Want:</h4> ${post.item1} <h4>What I'm Offering:</h4> ${post.item2}</li>`
     }
 }

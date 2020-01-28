@@ -22,6 +22,6 @@ class Posts {
     }
 
     render() {
-        this.postsContainer.innerHTML = this.posts.map(post => `<li><h4>What I Want:</h4> ${post.item1} <h4>What I'm Offering:</h4> ${post.item2}</li>`).join('')
+        this.postsContainer.innerHTML = this.posts.map(post => post.renderLi()).join('')
     }
 }
