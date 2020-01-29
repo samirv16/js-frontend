@@ -21,6 +21,9 @@ class Posts {
 
         this.adapter.createPost(value, value1).then(post => {
             this.posts.push(new Post(post))
+            // this.newPostBody.value = ""
+            // this.newPostBody.value1 = ""
+            this.render()
         })
     }
 
