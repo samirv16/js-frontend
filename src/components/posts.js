@@ -12,12 +12,6 @@ class Posts {
         this.newPostItem2 = document.getElementById('new-post-item2')
         this.postForm = document.getElementById('new-post-form')
         this.postForm.addEventListener('submit', this.createPost.bind(this))
-        this.postsContainer.addEventListener('dblclick', this.handlePostClick.bind(this))
-    }
-
-    handlePostClick(e) {
-        const li =  e.target
-        li.contentEditable = true
     }
 
     createPost(e) {
@@ -27,8 +21,8 @@ class Posts {
 
         this.adapter.createPost(value, value1).then(post => {
             this.posts.push(new Post(post))
-            // this.newPostBody.value = ""
-            // this.newPostBody.value1 = ""
+            this.newPostItem1.value = ""
+            this.newPostItem2.value = ""
             this.render()
         })
     }
