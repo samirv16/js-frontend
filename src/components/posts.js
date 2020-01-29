@@ -15,8 +15,9 @@ class Posts {
         this.postsContainer.addEventListener('dblclick', this.handlePostClick.bind(this))
     }
 
-    handlePostClick() {
-        console.log('double clicked')
+    handlePostClick(e) {
+        const li =  e.target
+        li.contentEditable = true
     }
 
     createPost(e) {
