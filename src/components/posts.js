@@ -19,7 +19,9 @@ class Posts {
         const value = this.newPostItem1.value
         const value1 = this.newPostItem2.value
 
-        this.adapter.createPost(value, value1)
+        this.adapter.createPost(value, value1).then(post => {
+            this.posts.push(new Post(post))
+        })
     }
 
     fetchAndLoadPosts() {
