@@ -50,29 +50,29 @@ class Posts {
     }
     
     setComments(ele) {
+        // debugger
         const post =  this.posts.find((post) => {
-            // debugger
             return post.id === parseInt(ele.dataset.id)
         })     
-        this.displayComments(post)
-   }
-
-   displayComments(post) {  
-    const commentButton = document.querySelector(".cmt-btn")
-    const li = document.createElement("li")  
-    li.innerHTML = ""
-    post.comments.forEach((comment) => {
-        const content = document.createElement("p")
-        content.classList = `comment ${comment.id}`
-        content.textContent = `comment: ${comment.content}`
-        li.appendChild(content) 
-      })
-      
-    commentButton.appendChild(li)
-   }
-
-
-
+        this.displayComments(post, ele)
+    }
+    
+    displayComments(post, ele) {  
+        const commentButton = document.querySelector(".cmt-btn")
+        const li = document.createElement("li")  
+        li.innerHTML = ""
+        post.comments.forEach((comment) => {
+            const content = document.createElement("p")
+            content.classList = `comment ${comment.id}`
+            content.textContent = `comment: ${comment.content}`
+            li.appendChild(content) 
+        })
+        
+        ele.parentElement.appendChild(li)
+    }
+    
+    
+    
     createCommentForm(ele) {
         const form = document.createElement("form")
         const textBox = document.createElement("input")
@@ -80,24 +80,24 @@ class Posts {
         
         submit.textContent = "Submit"
         submit.classList.add("btn", "btn-primary", "comment-submit")
-
+        
         textBox.name = "commentContent"
         textBox.setAttribute("type", "text")
         textBox.placeholder = `Enter a comment:`
         textBox.classList.add("form-control", "comment-input")
-
+        
         form.setAttribute("data-id", ele.dataset.id)
         
         form.append(textBox, submit)
         ele.parentElement.appendChild(form) 
         form.addEventListener('submit', (e) => {
-        e.preventDefault()
+            e.preventDefault()
             
-        this.postComment(e)
-       })
-   }
-   
-   postComment(e) {
+            this.postComment(e)
+        })
+    }
+    
+    postComment(e) {
        console.log(e.target)
         const content =  e.target.elements.commentContent.value
         const postId = e.target.dataset.id
@@ -112,8 +112,8 @@ class Posts {
                     alert(err.status)
 
                 })
-        } else {
-            alert("Post not long enough!")
+            } else {
+                alert("Comment is not allowed to be empty!")
         }
     }
 }
