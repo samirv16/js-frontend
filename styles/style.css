@@ -1,39 +1,17 @@
-body {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue light sans-serif';
-    font-weight: 300;
-    line-height: 1.6em;
-    font-size: 1em;
-}
-
-a {
-    color: #097659;
-}
-
-input {
-    font-size: 1em;
-}
-
 .container {
-    widows: 960px;
-    margin: auto;
-    margin-top: 50px;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-.delete-team-link {
-    color: red;
-}
-
-.editable {
+    list-style-position:inside;
     border: 1px solid black;
-    padding: 20px;
 }
 
-#notes-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 10px;
+.comment-input {
+    width: 50%;
+    position: center;
+    left: 13%;
+    margin-bottom: .5rem;
+}
+
+.comment-submit {
+    width: 50%;
+    position: center;
+    margin-bottom: .5rem;
 }

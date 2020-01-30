@@ -9,8 +9,7 @@ class Post {
     }
 
     renderLi() {
-        return `<li><h4>What I Want:</h4> ${this.item1} <h4>What I'm Offering:</h4> ${this.item2} </br>
-        <button class="create cmt-btn" data-id=${this.id} id="commentBtn">Comment: </button></li>`
-        
+        return `<li> <h4>What I Want:</h4> ${this.item1} <h4>What I'm Offering:</h4> ${this.item2} </br>
+        <button class="create cmt-btn" data-id=${this.id} id="commentBtn">Comment: </button></li>`  
     }
 }
