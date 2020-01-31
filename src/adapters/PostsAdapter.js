@@ -9,7 +9,7 @@ class PostsAdapter {
 
     getPosts() {
         return fetch(`${this.baseUrl}/posts`).then(res => res.json()
-        )
+        ) //fetch URL once resolved, then take res and parse into json
     }
 
     createPost(value, value1) {

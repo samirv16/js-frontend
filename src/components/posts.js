@@ -32,7 +32,7 @@ class Posts {
         this.adapter
         .getPosts()
         .then(posts => {
-            posts.forEach(post => this.posts.push(new Post(post))) //iterating through teams and pushed them into this.teams, now i have access to the teams in all the dif methods
+            posts.forEach(post => this.posts.push(new Post(post))) //
         })
         .then(() => {
             this.render()
@@ -50,7 +50,6 @@ class Posts {
     }
     
     setComments(ele) {
-        // debugger
         const post =  this.posts.find((post) => {
             return post.id === parseInt(ele.dataset.id)
         })     
@@ -58,13 +57,13 @@ class Posts {
     }
     
     displayComments(post, ele) {  
-        const commentButton = document.querySelector(".cmt-btn")
+        // const commentButton = document.querySelector(".cmt-btn")
         const li = document.createElement("li")  
         li.innerHTML = ""
         post.comments.forEach((comment) => {
             const content = document.createElement("p")
             content.classList = `comment ${comment.id}`
-            content.textContent = `comment: ${comment.content}`
+            content.textContent = `Someone said: ${comment.content}`
             li.appendChild(content) 
         })
         
@@ -78,7 +77,7 @@ class Posts {
         const textBox = document.createElement("input")
         const submit = document.createElement("button")
         
-        submit.textContent = "Submit"
+        submit.textContent = "Submit comment"
         submit.classList.add("btn", "btn-primary", "comment-submit")
         
         textBox.name = "commentContent"
@@ -98,7 +97,6 @@ class Posts {
     }
     
     postComment(e) {
-       console.log(e.target)
         const content =  e.target.elements.commentContent.value
         const postId = e.target.dataset.id
         const post = this.posts.find((post) =>  post.id === parseInt(postId))
