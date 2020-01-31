@@ -77,7 +77,6 @@ body {
     cursor: pointer;
   }
   .star.rated::before{
-    /* the style for a selected star */
     content: '\2605';  /* filled star */
   }
   
