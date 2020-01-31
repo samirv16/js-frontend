@@ -14,13 +14,13 @@ class Post {
         return `
             <div class="text-center">
                     <div class="container mb-1" data-id="${this.id}">
-                        <div class="card-body">
+                        <div class="text-monospace">
                             <h4>What I Want:</h4> ${this.item1}
                         </div>
-                        <div class="card-text">
+                        <div class="text-monospace">
                             <h4>What I'm Offering:</h4> ${this.item2}
                         </div>
-                            <div class="interactive-comments post-${this.id}"> 
+                            <div class="interactive-comments post-${this.id} text-monospace"> 
                             <button class="create cmt-btn" data-id=${this.id} id="commentBtn">Comment: </button>
                         </div>
                     </div>

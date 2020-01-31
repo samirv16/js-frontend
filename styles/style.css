@@ -3,6 +3,9 @@ body {
     background-image: url('../images/bw-wall.jpg');
   }
 
+.title {
+    color: rgb(95, 12, 12);
+}
 
 .container {
     list-style-position:inside;
@@ -21,12 +24,14 @@ body {
     display: inline-block;
     width: 45%;
     text-align: right;
+    color: rgb(95, 12, 12);
 }
 
 .input-item {
     display: inline-block;
-     text-align: left;
-     width: 45%;
+    text-align: left;
+    width: 45%;
+    color: rgb(95, 12, 12);
 }
 
 .comment-input {
