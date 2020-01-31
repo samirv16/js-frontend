@@ -51,3 +51,44 @@ body {
     margin-bottom: 1rem;
 }
 
+/* .stars {
+    unicode-bidi: bidi-override;
+    color:white;
+    position: relative; right:470px; bottom:40px;
+  }
+  .stars > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+  }
+  .stars > span:hover:before,
+  .stars > span:hover ~ span:before {
+     content: "\2605";
+     position: absolute;
+  } */
+
+  .star{
+    color: goldenrod;
+    font-size: 2.0rem;
+    padding: 0 1rem; /* space out the stars */
+  }
+  .star::before{
+    content: '\2606';    /* star outline */
+    cursor: pointer;
+  }
+  .star.rated::before{
+    /* the style for a selected star */
+    content: '\2605';  /* filled star */
+  }
+  
+  .stars{
+      counter-reset: rateme 0;   
+      font-size: 2.0rem;
+      font-weight: 900;
+  }
+  .star.rated{
+      counter-increment: rateme 1;
+  }
+  .stars::after{
+      content: counter(rateme) '/5';
+  }

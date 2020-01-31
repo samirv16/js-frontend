@@ -23,6 +23,13 @@ class Post {
                             <div class="interactive-comments post-${this.id} text-monospace"> 
                             <button class="create cmt-btn" data-id=${this.id} id="commentBtn">Comment: </button>
                         </div>
+                        <div class="stars" data-rating="3">
+                            <span class="star">&nbsp;</span>
+                            <span class="star">&nbsp;</span>
+                            <span class="star">&nbsp;</span>
+                            <span class="star">&nbsp;</span>
+                            <span class="star">&nbsp;</span>
+                        </div>
                     </div>
             </div>
             `
