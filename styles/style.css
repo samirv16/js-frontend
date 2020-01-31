@@ -1,10 +1,17 @@
+body {
+    background-color: lightblue;
+  }
+
+  
 .container {
     list-style-position:inside;
     border: 1px solid black;
     color: white;
-    background-color:darkblue;
-    padding-bottom: 1.5rem;
+    background-color:rgb(255, 153, 153);
+    padding-bottom: 2rem;
 }
+
+
 
 .label-item {
     display: inline-block;

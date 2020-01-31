@@ -13,7 +13,7 @@ class Post {
         // <button class="create cmt-btn" data-id=${this.id} id="commentBtn">Comment: </button></li>` 
         return `
             <div class="text-center">
-                    <div class="container" data-id="${this.id}">
+                    <div class="container mb-1" data-id="${this.id}">
                         <div class="card-body">
                         <h4>What I Want:</h4> ${this.item1}
                         </div>
