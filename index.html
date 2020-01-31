@@ -10,15 +10,27 @@
 </head>
 <body>
     
-    <div class="main-container" >
+    <div>
         <h1 class="text-center">FreExchange</h1>
-        <div class="text-center" id="new-post-container">
+        <div class="new-post-form" id="new-post-container">
             <form id="new-post-form">
-                What You Want:        <input type="text" name="post-item1" id="new-post-item1"><br>
-                What You're Offering: <input type="text" name="post-item2" id="new-post-item2">
+              <div class="label-item">
+                <label>What You Want:</label>
+              </div>
+              <div class="input-item">
+                <input type="text" name="post-item1" id="new-post-item1">
+              </div>
+              <div class="label-item">
+                <label>What You're Offering:</label>
+              </div>
+              <div class="input-item">
+                <input type="text" name="post-item2" id="new-post-item2">
                 <input type="submit" value="Save post">
+              </div>
             </form>
-        </div>
+        </div><br>
+      </div><br>
+
         <div id="posts-contant">
           <ul id="posts-container">
 

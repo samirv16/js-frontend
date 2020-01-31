@@ -58,16 +58,16 @@ class Posts {
     
     displayComments(post, ele) {  
         // const commentButton = document.querySelector(".cmt-btn")
-        const li = document.createElement("li")  
-        li.innerHTML = ""
+        const div = document.createElement("div")  
+        div.innerHTML = ""
         post.comments.forEach((comment) => {
             const content = document.createElement("p")
             content.classList = `comment ${comment.id}`
             content.textContent = `Someone said: ${comment.content}`
-            li.appendChild(content) 
+            div.appendChild(content) 
         })
         
-        ele.parentElement.appendChild(li)
+        ele.parentElement.appendChild(div)
     }
     
     

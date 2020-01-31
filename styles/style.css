@@ -1,17 +1,37 @@
 .container {
     list-style-position:inside;
     border: 1px solid black;
+    color: white;
+    background-color:darkblue;
+    padding-bottom: 1.5rem;
+}
+
+.label-item {
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+}
+
+.input-item {
+    display: inline-block;
+     text-align: left;
+     width: 45%;
 }
 
 .comment-input {
     width: 50%;
-    position: center;
-    left: 13%;
+    position: relative;
+    left: 25%;
     margin-bottom: .5rem;
 }
 
 .comment-submit {
     width: 50%;
-    position: center;
+    position: relative;
     margin-bottom: .5rem;
 }
+
+.comment-create {
+    margin-bottom: 1rem;
+}
+
