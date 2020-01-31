@@ -1,13 +1,17 @@
 body {
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    background-image: url('../images/bw-wall.jpg');
   }
 
-  
+
 .container {
     list-style-position:inside;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     color: white;
-    background-color:rgb(255, 153, 153);
+    /* background-color:rgb(255, 153, 153); */
+    background-image: url('../images/wood.jpg');
+    background-repeat: no-repeat;
+    background-size: 2000px 300px;
     padding-bottom: 2rem;
 }
 
